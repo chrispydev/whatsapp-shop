@@ -66,7 +66,8 @@ const updateCartQuantity = (id: any, quantity: any) => {
     if (item) item.quantity = quantity;
 };
 
-const removeFromCart = (id: string) => {
+// const removeFromCart = (id: string) => {
+const removeFromCart = (id: any) => {
     const index = cart.value.findIndex((item) => item.id === id);
     if (index !== -1) {
         const item = cart.value[index];

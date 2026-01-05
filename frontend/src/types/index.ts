@@ -5,6 +5,7 @@ export interface Product {
     image: string;
     fallbackImage?: string;
     category?: string;
+    in_stock?: boolean;
 }
 
 export interface CartItem extends Product {

@@ -47,11 +47,11 @@ const formatPrice = (price: number) => {
             ></div>
 
             <!-- Product Image -->
+            <!-- @error="onImageError" -->
             <img
                 :src="product.image"
                 :alt="product.name"
                 @load="onImageLoad"
-                @error="onImageError"
                 class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 :class="{
                     'opacity-0': !isImageLoaded,
