@@ -60,7 +60,8 @@ const addToCart = (product: Product) => {
     showToast.value = true;
 };
 
-const updateCartQuantity = (id: string, quantity: number) => {
+// const updateCartQuantity = (id: string, quantity: number) => {
+const updateCartQuantity = (id: any, quantity: any) => {
     const item = cart.value.find((item) => item.id === id);
     if (item) item.quantity = quantity;
 };
@@ -71,7 +72,7 @@ const removeFromCart = (id: string) => {
         const item = cart.value[index];
         cart.value.splice(index, 1);
 
-        toastMessage.value = `${item.name} removed from cart`;
+        toastMessage.value = `${item?.name} removed from cart`;
         toastType.value = "info";
         showToast.value = true;
     }
